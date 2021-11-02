@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Upload Image{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col" style="top: 60px;">
+            <div>
+                <h1 style="color: dodgerblue;">Detection Covid 19 and Pneumonia</h1>
+            </div>
+            <form action="/" method="POST" enctype="multipart/form-data">
+                <div class="from-group">
+                    <label><h3>Select Scanner Image</h3></label>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" name="image" id="image" onchange="loadFile(event)">
+                        <label for="image" accept="image/*" class="custom-file-label" style="width: 500px;">Select image...</label>
+                    </div>
+                </div>
+                <div>
+                    <img id="output" width="200" alt="Scanner Image">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary">Upload image</button>
+                </div>
+                
+                
+            </form>    
+        </div>
+    </div>    
+</div>
+
+{% endblock %}
